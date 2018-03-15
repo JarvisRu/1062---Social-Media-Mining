@@ -13,7 +13,7 @@ iris_y = iris.target
 # split train & test
 train_x, test_x, train_y, test_y = train_test_split(iris_x, iris_y, test_size=.3)
 
-# create classification
+# create classification - DT
 clf = tree.DecisionTreeClassifier()
 iris_clf = clf.fit(train_x, train_y)
 
