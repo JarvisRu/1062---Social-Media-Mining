@@ -2,6 +2,7 @@ from sklearn.datasets import load_iris
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 # load iris gerneally
 iris = load_iris()
 iris_x = iris.data

@@ -33,17 +33,3 @@ plt.xlabel("Value of K for KNN")
 plt.ylabel("Accuracy")
 plt.title("The Highest Accuracy is {}".format(max(accuarcies)))
 plt.show()
-
-
-
-# basic predict
-# # create classification - KNN
-# clf = neighbors.KNeighborsClassifier(8)
-# iris_clf = clf.fit(train_x, train_y)
-
-# # predict with test_x
-# predicted_y = iris_clf.predict(test_x)
-
-# # get the accuracy
-# knn_accuracy = accuracy_score(test_y, predicted_y)
-# print(knn_accuracy)

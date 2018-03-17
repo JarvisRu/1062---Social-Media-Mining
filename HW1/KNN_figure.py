@@ -11,7 +11,7 @@ import matplotlib.patches as mpatches
 iris = load_iris()
 
 # get two column of data
-iris_x = iris.data[:, :2]
+iris_x = iris.data[:, :2]   # using sepal length & width
 iris_y = iris.target
 
 # split train & test
@@ -36,7 +36,7 @@ predicted_z = iris_clf.predict(np.c_[xx.ravel(), yy.ravel()])
 predicted_z = predicted_z.reshape(xx.shape)
 
 # prepare cmap
-cmap_background = ListedColormap(['#97cbff','#adfedc','#ffad86'])
+cmap_background = ListedColormap(['#97cbff', '#adfedc', '#ffad86'])
 cmap_scatter = ListedColormap(['#005ab5', '#019858', '#a23400'])
 
 # prepare patches
@@ -46,8 +46,8 @@ red_patch = mpatches.Patch(color="#ffad86", label="iris_Virginica")
 
 # figure part
 plt.figure()
-plt.pcolormesh(xx, yy, predicted_z, cmap=cmap_background)
-plt.scatter(iris_x[:,0], iris_x[:,1], c=iris_y, cmap=cmap_scatter, marker='*')
+plt.pcolormesh(xx, yy, predicted_z, cmap=cmap_background)                             # predict 
+plt.scatter(iris_x[:,0], iris_x[:,1], c=iris_y, cmap=cmap_scatter, marker='o', s=20)  # real data
 plt.legend(handles= [blue_patch, green_patch, red_patch])
 
 plt.xlim(xx.min()+.5, xx.max()-.5)
