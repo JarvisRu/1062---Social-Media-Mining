@@ -49,9 +49,14 @@ plt.figure()
 plt.pcolormesh(xx, yy, predicted_z, cmap=cmap_background)
 plt.scatter(iris_x[:,0], iris_x[:,1], c=iris_y, cmap=cmap_scatter, marker='*')
 plt.legend(handles= [blue_patch, green_patch, red_patch])
+
 plt.xlim(xx.min()+.5, xx.max()-.5)
 plt.ylim(yy.min()+.5, yy.max()-.5)
+plt.xlabel("sepal length")
+plt.ylabel("sepal width")
+
 # get the accuracy
 knn_accuracy = accuracy_score(test_y, predicted_y)
 plt.title("KNN : k=8 / Accuracy={}".format(knn_accuracy))
+
 plt.show()
