@@ -9,7 +9,7 @@ import matplotlib.patches as mpatches
 
 # load iris dataset
 iris = load_iris()
-iris_x = np.c_[iris.data[:,0], iris.data[:,2]]  # using sepal length & petal length
+iris_x = iris.data[:, 2:4]      # using petal length & petal length
 iris_y = iris.target
 
 # split train & test
@@ -50,8 +50,8 @@ plt.legend(handles= [blue_patch, green_patch, red_patch])
 
 plt.xlim(xx.min()+.3, xx.max()-.3)
 plt.ylim(yy.min()+.3, yy.max()-.3)
-plt.xlabel("sepal length")
-plt.ylabel("petal length")
+plt.xlabel("petal length")
+plt.ylabel("petal width")
 
 # get the accuracy
 DT_accuracy = accuracy_score(test_y, predicted_y)
