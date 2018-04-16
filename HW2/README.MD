@@ -18,5 +18,5 @@
     - write it out to **task1_out.xml**
 3. Evaluate
     - Do evaluation of 
-        - test = baseline_task1.xml , ref = Restaurants_Test_Gold.xml
-        - test = task1_out.xml , ref = Restaurants_Test_Gold.xml
+        - test = **baseline_task1.xml** , ref = **Restaurants_Test_Gold.xml**
+        - test = **task1_out.xml** , ref = **Restaurants_Test_Gold.xml**
